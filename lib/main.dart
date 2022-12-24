@@ -10,58 +10,68 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      title: 'Stateful 위젯 데모',
+      home: Scaffold(
+        appBar: AppBar(title: Text('Stateful 위젯 데모')),
+        body: _MyStatefulWidget(),
       ),
-      home: const MyHomePage(title: '플러터 데모 홈페이지'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
+class _MyStatefulWidget extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State createState() => _MyStatefulWidgetState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _MyStatefulWidgetState extends State<_MyStatefulWidget> {
+  late String _buttonState;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  @override
+  void initState() {
+    super.initState();
+    print("initState(): 기본값을 설정합니다.");
+    _buttonState = "OFF";
+  }
+
+  @override
+  void didChangeDependencies() {
+    print("didChangeDependencies() 호출됨");
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+    print("build() 호출됨");
+    return Column(
+      children: <Widget>[
+        ElevatedButton(
+          child: Text("버튼을 누르세요"),
+          onPressed: _onClick,
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+        Row(
+          children: <Widget>[
+            Text('버튼 상태: '),
+            Text(_buttonState),
+          ],
+        )
+      ],
     );
+  }
+
+  void _onClick() {
+    print('_onClick() 호출됨');
+    setState(() {
+      print('setState() 호출됨');
+      if (_buttonState == 'OFF') {
+        _buttonState = 'ON';
+      } else {
+        _buttonState = "OFF";
+      }
+    });
+  }
+
+  @override
+  void didUpdateWidget(_MyStatefulWidget oldWidget) {
+    print("didUpdateWidget()");
   }
 }
