@@ -91,6 +91,18 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets/london.jpg
-    - assets/autumn-leaves.jpg
-    - assets/logo.png
+    - assets/image/london.jpg
+    - assets/image/autumn-leaves.jpg
+    - assets/image/logo.png
+
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Regular.ttf
+        - asset: assets/fonts/Raleway-Italic.ttf
+          style: italic
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700

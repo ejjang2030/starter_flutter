@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'ch4_layout_and_widget/4_3_container_row_column_widget.dart';
 import 'ch4_layout_and_widget/4_4_listview_widget.dart';
+import 'ch4_layout_and_widget/4_5_materialapp_and_scaffold_widget.dart';
 
 void main() {
-  runApp(ListViewDynamicApp());
+  runApp(SimpleThemeApp());
 }
 
 class MyApp extends StatelessWidget {

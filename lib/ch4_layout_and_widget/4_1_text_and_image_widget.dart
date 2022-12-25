@@ -53,8 +53,8 @@ class ImageDemo extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Image.asset('assets/london.jpg'),
-            Image.asset('assets/autumn-leaves.jpg'),
+            Image.asset('assets/image/london.jpg'),
+            Image.asset('assets/image/autumn-leaves.jpg'),
           ],
         ),
       ),
