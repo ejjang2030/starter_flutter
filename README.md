@@ -1,16 +1,46 @@
-# starter_flutter
+---
+marp: true
+---
 
-A new Flutter project.
+# 처음 배우는 **플러터**
 
-## Getting Started
+- 예제로 배우는 크로스 플랫폼 애플리케이션 개발
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+# 플러터 초기 설정(macOS 기준)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 플러터 설치
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[플러터 설치(https://flutter.dev/get-started/install/)](https://flutter.dev/get-started/install/)에서 참고
+
+## 플러터 프로젝트 생성하기
+
+```sh
+flutter create <directory name>
+```
+
+---
+
+## 플러터 프로젝트 디렉터리 및 파일 기본 구조
+
+### 디렉터리 구조
+
+| 디렉터리명   | 설명                                                                |
+| ------------ | ------------------------------------------------------------------- |
+| lib 폴더     | 플러터 소스코드(.dart 파일) 위치                                    |
+| android 폴더 | 플러터를 컴파일하여 생성된 안드로이드 앱 소스코드. 일단 자동생성 됨 |
+| ios 폴더     | 플러터를 컴파일 하여 생성된 iOS 앱 소스코드. 이것도 자동 생성 됨    |
+| test 폴더    | 테스트 코드를 작성할 수 있는 디렉터리                               |
+
+---
+
+### 최상위 디렉터리 주요 파일들
+
+| 최상위 폴더 주요 파일들 | 설명                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------ |
+| .gitignore 파일         | git이 로컬에만 적용하고 싶은 것만 골라주는 파일                                      |
+| .metadata 파일          | 플러터 프로젝트를 위한 내부 파일                                                     |
+| .packages 파일          | pubspec.yaml 파일과 관련된 내부 파일(자동 생성)                                      |
+| hello_flutter.iml 파일  | .iml파일은 안드로이드 스튜디오가 생성                                                |
+| pubspec.yaml 파일       | 중요한 파일. YAML파일로 플러터 프로젝트에 필요한 라이브러리나 리소스를 지정하는 파일 |
