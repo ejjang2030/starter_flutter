@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'ch4_layout_and_widget/4_3_container_row_column_widget.dart';
 import 'ch4_layout_and_widget/4_4_listview_widget.dart';
 import 'ch4_layout_and_widget/4_5_materialapp_and_scaffold_widget.dart';
+import 'ch5_routes_and_states/5_1_move_new_page.dart';
 
 void main() {
-  runApp(SimpleThemeApp());
+  runApp(NavigatorRoutesDemo());
 }
 
 class MyApp extends StatelessWidget {
