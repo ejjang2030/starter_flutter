@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:starter_flutter/ch5_routes_and_states/5_3_3_state_simple.dart';
 import 'ch4_layout_and_widget/4_3_container_row_column_widget.dart';
 import 'ch4_layout_and_widget/4_4_listview_widget.dart';
 import 'ch4_layout_and_widget/4_5_materialapp_and_scaffold_widget.dart';
 import 'ch5_routes_and_states/5_1_move_new_page.dart';
 import 'ch5_routes_and_states/5_2_0_dynamic_routes.dart';
+import 'ch5_routes_and_states/5_3_0_state_management.dart';
+import 'ch5_routes_and_states/5_3_3_state_simple.dart';
+import 'ch5_routes_and_states/5_3_1_page_login.dart';
+import 'ch5_routes_and_states/5_3_2_page_main.dart';
 
-void main() {
-  runApp(ContactsDemoV3());
-}
+void main() => runApp(ChangeNotifierProvider(
+      create: (context) => SimpleState(),
+      child: StateLoginDemo(),
+    ));
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
