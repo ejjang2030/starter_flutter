@@ -3,9 +3,10 @@ import 'ch4_layout_and_widget/4_3_container_row_column_widget.dart';
 import 'ch4_layout_and_widget/4_4_listview_widget.dart';
 import 'ch4_layout_and_widget/4_5_materialapp_and_scaffold_widget.dart';
 import 'ch5_routes_and_states/5_1_move_new_page.dart';
+import 'ch5_routes_and_states/5_2_0_dynamic_routes.dart';
 
 void main() {
-  runApp(NavigatorRoutesDemo());
+  runApp(ContactsDemoV3());
 }
 
 class MyApp extends StatelessWidget {
