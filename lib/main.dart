@@ -10,11 +10,10 @@ import 'ch5_routes_and_states/5_3_0_state_management.dart';
 import 'ch5_routes_and_states/5_3_3_state_simple.dart';
 import 'ch5_routes_and_states/5_3_1_page_login.dart';
 import 'ch5_routes_and_states/5_3_2_page_main.dart';
+import 'ch6_http_json_programming/6_1_async_http_call.dart';
+import 'ch6_http_json_programming/6_3_public_api_sync.dart';
 
-void main() => runApp(ChangeNotifierProvider(
-      create: (context) => SimpleState(),
-      child: StateLoginDemo(),
-    ));
+void main() => runApp(SubwayDemo());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
